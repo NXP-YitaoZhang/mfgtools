@@ -209,6 +209,7 @@ public:
 		MX8MQ,
 		MXRT102X,
 		MXRT105X,
+		MXRT106X,
 		// Device supporting multi image must be defined below.
 		MX8QM,
 		MX8QXP,

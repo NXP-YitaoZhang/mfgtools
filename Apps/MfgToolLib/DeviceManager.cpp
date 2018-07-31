@@ -302,6 +302,7 @@ BOOL DeviceManager::InitInstance()
 		case DEV_HID_MX8QXP:
 		case DEV_HID_MXRT102X:
 		case DEV_HID_MXRT105X:
+		case DEV_HID_MXRT106X:
 			pDevClass = new MxHidDeviceClass(m_pLibHandle);
 			if(pDevClass == NULL)
 			{
@@ -633,6 +634,7 @@ void DeviceManager::OnMsgDeviceEvent(WPARAM eventType, LPARAM desc)
 				case DEV_HID_MX8QXP:
 				case DEV_HID_MXRT102X:
 				case DEV_HID_MXRT105X:
+				case DEV_HID_MXRT106X:
 					nsInfo = g_devClasses[DeviceClass::DeviceTypeMxHid]->AddUsbDevice(msg);
 					LogMsg(LOG_MODULE_MFGTOOL_LIB, LOG_LEVEL_NORMAL_MSG, _T("DeviceManager::OnMsgDeviceEvent() - DEVICE_ARRIVAL_EVT,[MxHidDeviceClass] vid_%04x&pid_%04x, Hub:%d-Port:%d"), pCurrentState->uiVid, pCurrentState->uiPid, nsInfo.HubIndex, nsInfo.PortIndex);
 					break;
@@ -712,6 +714,7 @@ void DeviceManager::OnMsgDeviceEvent(WPARAM eventType, LPARAM desc)
 					case DEV_HID_MX8QXP:
 					case DEV_HID_MXRT102X:
 					case DEV_HID_MXRT105X:
+					case DEV_HID_MXRT106X:
 					{
 							LogMsg(LOG_MODULE_MFGTOOL_LIB, LOG_LEVEL_NORMAL_MSG, _T("DeviceArriveButEnumFailed Exception occurs"));
 							WaitForSingleObject(m_pExpectionHandler->m_hMapMsgMutex, INFINITE);
@@ -801,6 +804,7 @@ void DeviceManager::OnMsgDeviceEvent(WPARAM eventType, LPARAM desc)
 				case DEV_HID_MX8QXP:
 				case DEV_HID_MXRT102X:
 				case DEV_HID_MXRT105X:
+				case DEV_HID_MXRT106X:
 					nsInfo = g_devClasses[DeviceClass::DeviceTypeMxHid]->RemoveUsbDevice(msg);
 					class_type = DeviceClass::DeviceTypeMxHid;
 					LogMsg(LOG_MODULE_MFGTOOL_LIB, LOG_LEVEL_NORMAL_MSG, _T("DeviceManager::OnMsgDeviceEvent() - DEVICE_REMOVAL_EVT,[MxHidDeviceClass] vid_%04x&pid_%04x, Hub:%d-Port:%d"), pCurrentState->uiVid, pCurrentState->uiPid, nsInfo.HubIndex, nsInfo.PortIndex);

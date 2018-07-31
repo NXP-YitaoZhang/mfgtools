@@ -1071,6 +1071,10 @@ DWORD ParseUclXml(MFGLIB_VARS *pLibVars)
 		{
 			pState->opDeviceType = DEV_HID_MXRT105X;
 		}
+		else if (strTemp.CompareNoCase(_T("MXRT106X")) == 0)
+		{
+			pState->opDeviceType = DEV_HID_MXRT106X;
+		}
 		else
 		{
 			LogMsg(LOG_MODULE_MFGTOOL_LIB, LOG_LEVEL_FATAL_ERROR, _T("Error: Invalid device name: %s"), strTemp);
