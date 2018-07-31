@@ -73,6 +73,11 @@ Device* CDCDeviceClass::CreateDevice(DeviceClass* deviceClass, SP_DEVINFO_DATA d
 	// Check whether the device's VID and PID is in the ucl2.xml
 	for (; it != pOpStates->end(); it++)
 	{
+		if (((*it)->opDeviceType) != DEV_CDC_KBL)
+		{
+			continue;
+		}
+
 		filter.Format(_T("vid_%04x&pid_%04x"), (*it)->uiVid, (*it)->uiPid);
 		msg.MakeUpper();
 		filter.MakeUpper();
