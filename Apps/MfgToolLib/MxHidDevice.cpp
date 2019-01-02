@@ -142,6 +142,9 @@ MxHidDevice::MxHidDevice(DeviceClass * deviceClass, DEVINST devInst, CString pat
 	case DEV_HID_MX8QXP:
 		_chipFamily = MX8QXP;
 		break;
+	case DEV_HID_MXRT1015:
+		_chipFamily = MXRT1015;
+		break;
 	case DEV_HID_MXRT102X:
 		_chipFamily = MXRT102X;
 		break;

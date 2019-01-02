@@ -300,6 +300,7 @@ BOOL DeviceManager::InitInstance()
 		case DEV_HID_MX8MQ:
 		case DEV_HID_MX8QM:
 		case DEV_HID_MX8QXP:
+		case DEV_HID_MXRT1015:
 		case DEV_HID_MXRT102X:
 		case DEV_HID_MXRT105X:
 		case DEV_HID_MXRT106X:
@@ -632,6 +633,7 @@ void DeviceManager::OnMsgDeviceEvent(WPARAM eventType, LPARAM desc)
 				case DEV_HID_MX8MQ:
 				case DEV_HID_MX8QM:
 				case DEV_HID_MX8QXP:
+				case DEV_HID_MXRT1015:
 				case DEV_HID_MXRT102X:
 				case DEV_HID_MXRT105X:
 				case DEV_HID_MXRT106X:
@@ -712,6 +714,7 @@ void DeviceManager::OnMsgDeviceEvent(WPARAM eventType, LPARAM desc)
 					case DEV_HID_MX8MQ:
 					case DEV_HID_MX8QM:
 					case DEV_HID_MX8QXP:
+					case DEV_HID_MXRT1015:
 					case DEV_HID_MXRT102X:
 					case DEV_HID_MXRT105X:
 					case DEV_HID_MXRT106X:
@@ -802,6 +805,7 @@ void DeviceManager::OnMsgDeviceEvent(WPARAM eventType, LPARAM desc)
 				case DEV_HID_MX8MQ:
 				case DEV_HID_MX8QM:
 				case DEV_HID_MX8QXP:
+				case DEV_HID_MXRT1015:
 				case DEV_HID_MXRT102X:
 				case DEV_HID_MXRT105X:
 				case DEV_HID_MXRT106X:
