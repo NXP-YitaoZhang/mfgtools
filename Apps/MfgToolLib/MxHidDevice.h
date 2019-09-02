@@ -207,10 +207,7 @@ public:
 		MX7ULP,
 		K32H844P,
 		MX8MQ,
-		MXRT1015,
-		MXRT102X,
-		MXRT105X,
-		MXRT106X,
+		MXRT10XX,
 		// Device supporting multi image must be defined below.
 		MX8QM,
 		MX8QXP,

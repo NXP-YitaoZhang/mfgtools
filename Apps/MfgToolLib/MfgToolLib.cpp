@@ -1063,21 +1063,29 @@ DWORD ParseUclXml(MFGLIB_VARS *pLibVars)
 		{
 			pState->opDeviceType = DEV_HID_MX8QXP;
 		}
+		else if (strTemp.CompareNoCase(_T("MXRT101X")) == 0)
+		{
+			pState->opDeviceType = DEV_HID_MXRT10XX;
+		}
 		else if (strTemp.CompareNoCase(_T("MXRT1015")) == 0)
 		{
-			pState->opDeviceType = DEV_HID_MXRT1015;
+			pState->opDeviceType = DEV_HID_MXRT10XX;
 		}
 		else if (strTemp.CompareNoCase(_T("MXRT102X")) == 0)
 		{
-			pState->opDeviceType = DEV_HID_MXRT102X;
+			pState->opDeviceType = DEV_HID_MXRT10XX;
 		}
 		else if (strTemp.CompareNoCase(_T("MXRT105X")) == 0)
 		{
-			pState->opDeviceType = DEV_HID_MXRT105X;
+			pState->opDeviceType = DEV_HID_MXRT10XX;
 		}
 		else if (strTemp.CompareNoCase(_T("MXRT106X")) == 0)
 		{
-			pState->opDeviceType = DEV_HID_MXRT106X;
+			pState->opDeviceType = DEV_HID_MXRT10XX;
+		}
+		else if (strTemp.CompareNoCase(_T("MXRT10XX")) == 0)
+		{
+			pState->opDeviceType = DEV_HID_MXRT10XX;
 		}
 		else
 		{
