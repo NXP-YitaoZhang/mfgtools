@@ -774,7 +774,7 @@ BOOL MxHidDevice::Jump(UINT RAMAddress, BOOL isPlugin)
     SDPCmd SDPCmd;
     CString LogStr;
 
-	if(this->_chipFamily >= MX7D) {
+	if((this->_chipFamily >= MX7D) && (this->_chipFamily != MXRT10XX)) {
 
 		SDPCmd.command = ROM_KERNEL_CMD_SKIP_DCD_HEADER;
 		SDPCmd.dataCount = 0;
