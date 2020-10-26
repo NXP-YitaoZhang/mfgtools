@@ -1075,6 +1075,10 @@ DWORD ParseUclXml(MFGLIB_VARS *pLibVars)
 		{
 			pState->opDeviceType = DEV_HID_MXRT10XX;
 		}
+		else if (strTemp.CompareNoCase(_T("MXRT1024")) == 0)
+		{
+			pState->opDeviceType = DEV_HID_MXRT10XX;
+		}
 		else if (strTemp.CompareNoCase(_T("MXRT105X")) == 0)
 		{
 			pState->opDeviceType = DEV_HID_MXRT10XX;
